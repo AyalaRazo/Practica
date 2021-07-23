@@ -313,7 +313,7 @@ header nav ul li a{
     filter: invert(1);
   }
   
-@media screen and (max-width: 1024px) {
+@media only screen and (max-width: 1024px) {
   body{
     font-size: 15px;
   }
@@ -352,7 +352,7 @@ header nav ul li a{
   }
 }
 
-@media screen and (max-width: 768px){
+@media only screen and (max-width: 768px){
 
   header nav{
     flex-direction: column;
@@ -489,7 +489,7 @@ header nav ul li a{
   }
 }
 
-@media screen and (max-width: 425px){
+@media only screen and (max-width: 425px){
 
   header nav ul li{
     padding-bottom: 25px;
@@ -578,7 +578,7 @@ header nav ul li a{
   }
 }
 
-@media screen and (max-width: 320px){
+@media only screen and (max-width: 320px){
 
   header nav ul li{
     padding-bottom: 20px;
