@@ -15,7 +15,6 @@ header{
     background-color: #DDDE84;
     width: 100vw;
     height: 60px;
-    max-width: 1440px;
     position: fixed;
     top: 0;
     left: 0;
@@ -92,7 +91,6 @@ header nav ul li a{
 
 .imagendefondo{
     width: 100vw;
-    max-width: 1440px;
     height: 800px;
     margin-top: 60px;
     position: absolute;
@@ -115,7 +113,6 @@ header nav ul li a{
 
 .imagendefondo img{
     width: 100vw;
-    max-width: 1440px;
     display: flex;
     margin: auto;
     height: 800px;
@@ -124,7 +121,6 @@ header nav ul li a{
 
 .bienvenida{
     width: 100vw;
-    max-width: 1440px;
     height: 725px;
     margin-top: 60px;
 }
@@ -166,24 +162,10 @@ header nav ul li a{
 
 .contenedorcarrusel3d{
     width: 100vw;
-    max-width: 1440px;
     height: 700px;
     position: relative;
     background: radial-gradient(#F8FFD8, #91928D);
     user-select: none;
-}
-
-.contenedorcarrusel3d .capa{
-    content: '';
-    background-color: #ffffff;
-    width: 6000px;
-    position: absolute;
-    top: 0;
-    left: 1440px;
-    right: 0;
-    bottom: 0;
-    height: 700px;
-    z-index: 10;
 }
 
 .contenedorcarrusel3d h2{
@@ -196,7 +178,6 @@ header nav ul li a{
 
 .linea{
     width: 60vw;
-    max-width: 860px;
     height: 2px;
     background: #000000;
     position: relative;
@@ -282,7 +263,6 @@ header nav ul li a{
 
   .contenedorfooter{
     width: 100vw;
-    max-width: 1440px;
     height: 280px;
     background: #4A4A4A;
     border-style: solid;
@@ -385,6 +365,7 @@ header nav ul li a{
     transition: right 1s;
     position: fixed;
     margin-top: 60px;
+    overflow-y: auto;
     display: none;
   }
 
