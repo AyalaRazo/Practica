@@ -8,7 +8,6 @@ body{
     font-family: 'Courgette', cursive;
     font-size: 16px;
     overflow-x: hidden;
-    zoom: 100%;
 }
 
 header{
@@ -358,7 +357,7 @@ header nav ul li a{
   header nav{
     flex-direction: column;
     width: 100vw;
-    height: 90vh;
+    height: 80vh;
     background-color: #DDDE84;
     transition: right 1s;
     position: fixed;
@@ -370,7 +369,7 @@ header nav ul li a{
   header nav ul{
     flex-direction: column;
     align-items: center;
-    padding-top: 90px;
+    padding-top: 20px;
   }
 
   header nav .nav,
