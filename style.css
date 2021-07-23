@@ -357,7 +357,7 @@ header nav ul li a{
   header nav{
     flex-direction: column;
     width: 100vw;
-    height: 80vh;
+    height: calc(80vh - 60px);
     background-color: #DDDE84;
     transition: right 1s;
     position: fixed;
