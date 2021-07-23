@@ -1,0 +1,691 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Courgette', cursive;
+    font-size: 16px;
+    overflow-x: hidden;
+    zoom: 100%;
+}
+
+header{
+    background-color: #DDDE84;
+    width: 100vw;
+    height: 60px;
+    max-width: 1440px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    user-select: none;
+    z-index: 10000;
+}
+
+header nav{
+    display: flex;
+    align-items: center;
+    height: 60px;
+}
+
+
+header nav ul{
+    list-style: none;
+    display: flex;
+}
+
+header nav .nav{
+    position: absolute;
+    top: 18px;
+    left: 0;
+}
+
+header nav .cuenta{
+    position: absolute;
+    top: 18px;
+    right: 25px;
+}
+
+header nav ul li{
+    margin-left: 8px;
+}
+
+header nav ul li a{
+    font-size: 19px;
+    font-weight: 700;
+    color:#000000;
+    text-decoration: none;
+    border-radius: 20px;
+    padding: 6px 15px;
+}
+
+.nav-main ul li a:hover ,
+.nav-main ul li a.inicio{
+    background: #DEE9B3;
+    transition-duration: 50ms;
+}
+
+.toggle{
+    width: 50px;
+    height: 50px;
+    background-color: transparent;
+    background-image: url(/icons/menu.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    display: none;
+}
+
+.toggle.active{
+    background-color: transparent;
+    background-image: url(/icons/close.png);
+    background-size: 40px;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+}
+
+.imagendefondo{
+    width: 100vw;
+    max-width: 1440px;
+    height: 800px;
+    margin-top: 60px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.imagendefondo::after{
+    content: '';
+    background-color: rgba(0,0,0,0.3);
+    max-height: 800px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+.imagendefondo img{
+    width: 100vw;
+    max-width: 1440px;
+    display: flex;
+    margin: auto;
+    height: 800px;
+    object-fit: fill;
+}
+
+.bienvenida{
+    width: 100vw;
+    max-width: 1440px;
+    height: 725px;
+    margin-top: 60px;
+}
+
+.bienvenida ul li .logo{
+    width: 150px;
+    display: block;
+    margin: auto;
+    padding-top: 20px;
+    opacity: 0.8;
+    user-select: none;
+}
+
+.bienvenida ul li h1{
+    font-size: 50px;
+    position: relative;
+    text-align: center;
+    padding-top: 170px;
+    color: #ECF5CC;
+    opacity: 0.9;
+    user-select: none;
+}
+
+.bienvenida ul li .flechaabajo{
+    width: 70px;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 255px;
+    bottom: 0;
+    justify-content: center;
+    filter: invert(1);
+    cursor: pointer;
+}
+
+.bienvenida .flechaabajo:hover{
+    filter: invert(0);
+}
+
+.contenedorcarrusel3d{
+    width: 100vw;
+    max-width: 1440px;
+    height: 700px;
+    position: relative;
+    background: radial-gradient(#F8FFD8, #91928D);
+    user-select: none;
+}
+
+.contenedorcarrusel3d .capa{
+    content: '';
+    background-color: #ffffff;
+    width: 6000px;
+    position: absolute;
+    top: 0;
+    left: 1440px;
+    right: 0;
+    bottom: 0;
+    height: 700px;
+    z-index: 10;
+}
+
+.contenedorcarrusel3d h2{
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 25px;
+}
+
+.linea{
+    width: 60vw;
+    max-width: 860px;
+    height: 2px;
+    background: #000000;
+    position: relative;
+    left: 280px;
+}
+
+.contenedorcarrusel3d h3{
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 50px;
+}
+
+.carrusel3d {
+    width: 50vw;
+    max-width: 300px;
+    height: 200px;
+    display: block;
+    margin: auto;
+    margin-top: 50px;
+    position: relative;
+    transform-style: preserve-3d;
+    perspective: 1100px;
+  }
+  
+  .carrusel3d input {
+    display: none;
+  }
+  
+  .carrusel3d img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    border: 1px solid black;
+    border-radius: 4px;
+    transition: 0.4s;
+    cursor: pointer;
+    user-select: none;
+  }
+
+  #radio1:checked ~ #img1 img,
+  #radio2:checked ~ #img2 img,
+  #radio3:checked ~ #img3 img,
+  #radio4:checked ~ #img4 img,
+  #radio5:checked ~ #img5 img {
+    transform: translate3d(0, 20%, 500px);
+  }
+  
+  #radio1:checked ~ #img2 img,
+  #radio2:checked ~ #img3 img,
+  #radio3:checked ~ #img4 img,
+  #radio4:checked ~ #img5 img,
+  #radio5:checked ~ #img1 img {
+    transform: translate3d(440px, 30%, 150px);
+  }
+  
+  #radio1:checked ~ #img3 img,
+  #radio2:checked ~ #img4 img,
+  #radio3:checked ~ #img5 img,
+  #radio4:checked ~ #img1 img,
+  #radio5:checked ~ #img2 img {
+    transform: translate3d(1000px, 30%, 0px);
+
+  }
+  
+  #radio1:checked ~ #img4 img,
+  #radio2:checked ~ #img5 img,
+  #radio3:checked ~ #img1 img,
+  #radio4:checked ~ #img2 img,
+  #radio5:checked ~ #img3 img {
+    transform: translate3d(-1000px, 30%, 0px);
+  }
+  
+  #radio1:checked ~ #img5 img,
+  #radio2:checked ~ #img1 img,
+  #radio3:checked ~ #img2 img,
+  #radio4:checked ~ #img3 img,
+  #radio5:checked ~ #img4 img {
+    transform: translate3d(-450px, 30%, 150px);
+  }
+
+  .contenedorfooter{
+    width: 100vw;
+    max-width: 1440px;
+    height: 280px;
+    background: #4A4A4A;
+    border-style: solid;
+    user-select: none;
+  }
+
+  .contenedorfooter h2{
+    color: #ffffff;
+    position: relative;
+    padding-top: 20px;
+    padding-right: 20px;
+    text-align: center;
+    font-size: 35px;
+
+  }
+
+  .separador{
+    width: 80vw;
+    max-width: 1200px;
+    height: 2px;
+    background: #000000;
+    display: block;
+    margin: auto;
+    position: relative;
+    top: 20px;
+    left: -15px;
+    
+  }
+
+  .redes-sociales{
+    position: relative;
+    top: 50px;
+  }
+
+  .redes-sociales ul{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    left: -80px;
+  }
+
+  .redes-sociales ul li{
+    margin-left: 150px;
+  } 
+
+  .redes-sociales ul li a img{
+    width: 60px;
+    height: 60px;
+    filter: invert(1);
+  }
+  
+@media screen and (max-width: 1024px) {
+  body{
+    font-size: 15px;
+  }
+
+  .nav-main ul li{
+    margin-left: 5px;
+  }
+
+  .imagendefondo{
+    max-width: 1024px;
+    height: 700px;
+  }
+
+  .imagendefondo img{
+    max-width: 1024px;
+    height: 700px;
+  }
+  
+  .bienvenida{
+    max-width: 1024px;
+    height: 700px;
+  }
+
+  .bienvenida ul li .logo{
+    width: 140px;
+  }
+
+  .bienvenida ul li h1{
+    font-size: 45px;
+    padding-top: 170px;
+  }
+
+  .bienvenida ul li .flechaabajo{
+    width: 55px;
+    top: 260px;
+  }
+}
+
+@media screen and (max-width: 768px){
+
+  header nav{
+    flex-direction: column;
+    width: 100vw;
+    height: 90vh;
+    background-color: #DDDE84;
+    transition: right 1s;
+    position: fixed;
+    margin-top: 60px;
+    display: none;
+  }
+
+  header nav ul{
+    flex-direction: column;
+    align-items: center;
+    padding-top: 90px;
+  }
+
+  header nav .nav,
+  header nav .cuenta{
+    position: unset;
+  }
+
+  header nav ul li{
+    padding-bottom: 25px;
+  }
+
+  header nav ul li a.inicio{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 100px;
+    padding-right: 100px;
+  }
+
+  header nav ul li a.productos{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 76px;
+    padding-right: 76px;
+  }
+
+  header nav ul li a.ordenes{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 85px;
+    padding-right: 85px;
+  }
+
+  header nav ul li a.sucursales{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 72px;
+    padding-right: 72px;
+  }
+
+  header nav ul li a.sobrenosotros{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 46px;
+    padding-right: 46px;
+  }
+
+  header nav ul li a.registro{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  header nav ul li a.iniciodesesion{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  header nav ul li a{
+    font-size: 26px;
+    border: 1px solid #000000;
+  }
+
+  .nav-main ul li a:hover{
+    background: unset;
+  }
+
+  .nav-main ul li a:focus,
+  .nav-main ul li a.inicio{
+    background: #DEE9B3;
+    transition-duration: 50ms;
+}
+
+  .nav-main.active{
+    display: inherit;
+    background: #EEEFA0;
+  }
+
+  .toggle{
+    display: inherit;
+  }
+
+  .toggle.active{
+    background-image: url(/icons/close.png);
+    background-size: 35px;
+  }
+
+  .imagendefondo{
+    max-width: 768px;
+    height: 650px;
+  }
+
+  .imagendefondo img{
+    max-width: 768px;
+    height: 650px;
+  }
+  
+  .bienvenida{
+    max-width: 768px;
+    height: 650px;
+  }
+
+  .bienvenida ul li .logo{
+    width: 120px;
+  }
+
+  .bienvenida ul li h1{
+    font-size: 40px;
+    padding-top: 175px;
+  }
+
+  .bienvenida ul li .flechaabajo{
+    width: 50px;
+    top: 240px;
+  }
+}
+
+@media screen and (max-width: 425px){
+
+  header nav ul li{
+    padding-bottom: 25px;
+  }
+
+  header nav ul li a{
+    font-size: 20px;
+  }
+
+  header nav ul li a.inicio{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 65px;
+    padding-right: 65px;
+  }
+
+  header nav ul li a.productos{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+
+  header nav ul li a.ordenes{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 57px;
+    padding-right: 57px;
+  }
+
+  header nav ul li a.sucursales{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 47px;
+    padding-right: 47px;
+  }
+
+  header nav ul li a.sobrenosotros{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 28px;
+    padding-right: 28px;
+  }
+
+  header nav ul li a.registro{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  header nav ul li a.iniciodesesion{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .imagendefondo{
+    max-width: 425px;
+    height: 405px;
+  }
+
+  .imagendefondo img{
+    max-width: 425px;
+    height: 405px;
+  }
+  
+  .bienvenida{
+    max-width: 425px;
+    height: 405px;
+  }
+
+  .bienvenida ul li .logo{
+    width: 100px;
+  }
+
+  .bienvenida ul li h1{
+    font-size: 25px;
+    padding-top: 80px;
+  }
+
+  .bienvenida ul li .flechaabajo{
+    width: 35px;
+    top: 140px;
+  }
+}
+
+@media screen and (max-width: 320px){
+
+  header nav ul li{
+    padding-bottom: 20px;
+  }
+
+  header nav ul li a{
+    font-size: 18px;
+  }
+
+  header nav ul li a.inicio{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 40px;
+    padding-right: 40px;
+  }
+
+  header nav ul li a.productos{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 23px;
+    padding-right: 23px;
+  }
+
+  header nav ul li a.ordenes{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  header nav ul li a.sucursales{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header nav ul li a.sobrenosotros{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+  header nav ul li a.registro{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 13px;
+    padding-right: 13px;
+  }
+
+  header nav ul li a.iniciodesesion{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+
+
+  .imagendefondo{
+    max-width: 320px;
+    height: 300px;
+  }
+
+  .imagendefondo img{
+    max-width: 320px;
+    height: 300px;
+  }
+
+  .bienvenida{
+    max-width: 320px;
+    height: 300px;
+  }
+
+  .bienvenida ul li .logo{
+    width: 80px;
+  }
+
+  .bienvenida ul li h1{
+    font-size: 22px;
+    padding-top: 30px;
+  }
+
+  .bienvenida ul li .flechaabajo{
+    width: 30px;
+    top: 110px;
+  }
+}
