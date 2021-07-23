@@ -68,7 +68,6 @@ header nav ul li a{
 .toggle{
     width: 50px;
     height: 50px;
-    background-color: transparent;
     background-image: url(icons/menu.png);
     background-size: 40px;
     background-repeat: no-repeat;
@@ -81,7 +80,6 @@ header nav ul li a{
 }
 
 .toggle.active{
-    background-color: transparent;
     background-image: url(icons/close.png);
     background-size: 40px;
     background-repeat: no-repeat;
